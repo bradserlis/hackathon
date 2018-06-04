@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+<link rel="stylesheet" href="../styles/main.css">
+ </head>
+ <body>
+  <%  include partials/alerts %>
+ <!-- Navigation -->
+    <div class="navbar-fixed">
+    <nav class="black-text">
+        <div class="nav-wrapper">
+          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons hamburger">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+            <li class="nav-item">
+            <% if(!currentUser) {%>
+              <a class="nav-link hidden" href="/auth/login">LOGIN</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link hidden" href="/auth/signup">SIGN UP</a>
+            </li>
+            <%} else {%>
+            <li class="nav-item">
+              <a class="nav-link" href="/profile/search">SEARCH <i class="far fa-id-badge"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/auth/logout">LOGOUT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/profile">PROFILE</a>
+             <% } %>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+         
+     
+
+    <div class="container">
+    <%- body %> 
+      
+    </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    
+  </script>
+ 
+<script src="../scripts/main.js"></script>
+</body>
+</html>

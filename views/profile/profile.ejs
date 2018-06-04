@@ -1,0 +1,45 @@
+<style>
+nav .nav-wrapper {
+    background-color: #5bb8ad;
+}
+ h1, .home-button {
+    font-family: 'Raleway', sans-serif;
+ }
+</style>
+<h1>PROFILE PAGE</h1>
+
+<div>
+    <a href="/profile/edit" style="text-decoration-line: none"><button type="button" name="editButton" class="editBtn btn btn-warning">Edit Profile</button></a>
+</div>
+<div>
+	<a href="/profile/edit" style="text-decoration-line: none"><button type="button" name="editButton" class="editBtn btn btn-warning">Post New Items</button></a>
+</div>
+<h2>Hello, welcome back, <%= currentUser.name %></h2>
+	<p>Location:<%= currentUser.zipcode %> </p>
+		<%currentUser.items.forEach(function(item){ %>
+		 <li><%= item %></li>
+		<% }) %>
+		</div>
+    </ul>
+    
+    <div class="container">    
+    <h3> Swap Requests:</h3>
+    <% currentUser.comments.forEach(function(post){ %>
+    <div class="row">
+        <div class="col-md-12 commentTable">
+            <table class='table table-striped'>
+            <thead class="thead-dark">
+            </thead>
+            <tbody>
+            <th><%= post.author%>:</th>
+            <tr>    
+	</div>
+            <td>"<%= post.message %>"</td>
+            <td class='right'><%= post.date %></td>
+            </tr>
+            </tbody>
+            </table>
+        <%}) %> 
+        </div>
+    </div>
+    </div>

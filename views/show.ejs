@@ -1,0 +1,73 @@
+
+<style>
+nav .nav-wrapper {
+    background-color: #5bb8ad;
+}
+ h1, .modal-trigger {
+    font-family: 'Raleway', sans-serif;
+ }
+ .showLi {
+    font-size: 20px;
+    padding: 5px;
+ }
+ .showUl{
+    font-size: 25px;
+ }
+</style>
+<h1> <%=thisUser.name %> </h1>
+
+
+	<ul><span class='showUl'>Items:</span>
+<%thisUser.items.forEach(function(item){ %>
+		<div class="showLi">
+		<li><%= item %></li>
+		<% }) %>	
+		</div>
+	</ul>
+	<hr>
+	</ul>
+	
+	<hr>
+	
+	<p>Location:<%= thisUser.zipcode %> </p>
+	
+	
+		<!-- <div class="col-sm-5 col-12">
+            <button type="button" class="add btn btn-warning" data-toggle="modal" data-target="#commentModal"> Request Swap <i class="far fa-comment-alt"></i></button>
+ 		</div> -->
+
+        <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Request Swap</a>
+
+        <div id="modal1" class="modal">
+          <div class="modal-content">
+            <h4>Modal Header</h4>
+            <p>A bunch of text</p>
+          </div>
+        
+
+      </div>
+      </div>
+
+
+<!-- <div class="modal fade messageText" id="commentModal" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="commentlModalLabel"> Leave a Message</h5>
+      </div>
+    <div class="modal-body">
+        <form id="commentForm" data-id="<%= thisUser._id %>">
+            <div class="form-group row">
+                <label class="col-sm-12 col-form-label">Message:</label>
+                <div class="col-sm-12">
+                        <textarea name="message" class="form-control" cols="30" rows="10"></textarea>
+                        <span class="help-block"><p>You may want to leave contact info for this user to reach you at -- messaging in-app coming soon!</span></p>
+                        <input type="text" class="form-control" name="author" value="<%=currentUser.name%>" hidden="true">
+           		</div>
+            <button type="submit" form="commentForm" class="commentSubmit btn btn-success"> Submit Message</button>
+        	</div>
+		</form>
+	</div>
+</div>
+</div>
+</div> -->

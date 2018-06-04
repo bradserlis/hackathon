@@ -1,0 +1,34 @@
+<h1>Edit Profile</h1>
+<button class="btn btn-danger float-right" id="deleteAccountButton">DELETE ACCOUNT</button>
+<h2><%= currentUser.name %></h2>
+<div class="container">
+	<form id="updateForm">
+	<div class="form-group instrumentsUpdate">
+		<label for="instruments">Instruments</label>
+		<br><input type="checkbox" name="instruments" value="Guitar">Guitar
+		<br><input type="checkbox" name="instruments" value="Bass">Bass 
+		<br><input type="checkbox" name="instruments" value="Drums">Drums 
+		<br><input type="checkbox" name="instruments" value="Aggressive Vocals">Vocals (Aggressive)
+		<br><input type="checkbox" name="instruments" value="Vocals">Vocals
+		<br><input type="checkbox" name="instruments" value="Keys-Synth">Keys/Synth 
+	</div>
+	<hr>
+	<div class="form-group genresUpdate">
+		<label for="genres">Genres I would like to play:</label>
+		<br><input type="checkbox" name="genresToPlay" value="Rock">Rock
+		<br><input type="checkbox" name="genresToPlay" value="Metal">Metal 
+		<br><input type="checkbox" name="genresToPlay" value="Post-Hardcore">Post-Hardcore 
+		<br><input type="checkbox" name="genresToPlay" value="Indie-Rock">Indie Rock
+		<br><input type="checkbox" name="genresToPlay" value="Funk">Funk
+		<br><input type="checkbox" name="genresToPlay" value="Blues">Blues
+		<br><input type="checkbox" name="genresToPlay" value="Alternative">Alternative
+		<br>
+	</div>
+	<div class="form-group zipcodeUpdate">
+		<label for="zipcode">Zipcode</label>
+		<input type="number" name="zipcode" maxlength="5">
+	</div>
+
+	<input type="submit" value="Confirm Changes" class="btn btn-success" form="updateForm">
+	</form>
+</div>

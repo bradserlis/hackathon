@@ -1,0 +1,42 @@
+<style>
+nav .nav-wrapper {
+    background-color: #5bb8ad;
+}
+ h1, .home-button {
+ 	font-family: 'Raleway', sans-serif;
+ }
+ .list {
+ 	float:left;
+ 	width: 950px;
+ 	overflow-y: auto;
+ 	height: 200px;
+ 	border: solid 1px black;
+ }
+
+</style>
+
+<h1>Search items that you like to swap</h1>
+
+<input class="input" type ="text" name="zipcode" placeholder="Search item">
+               <button type="submit" class="btn btn-primary home-button">Search</button>
+<p>Searching 15 miles of: <%= your_location%></span></p>
+<hr>
+<hr>
+<div class="list">
+<div class="row search-box">
+
+<% matchedUsers.forEach(function(val){ %>
+			<%val.items.forEach(function(item){ %>
+			<li><%= item %></li>
+		<div>
+            <a href="/show/<%=val._id%>"><button type="button" class="add btn btn-warning searchPage" data-id="<%=val._id %>">Learn More</button></a>
+			<% }); %>
+ 		</div>
+		</ul>
+</div>
+
+<% }); %> 
+</div>
+</div>
+
+

@@ -1,0 +1,49 @@
+h1 {
+  text-align: right;
+  background-image: linear-gradient(transparent 110px, #5bb8ad 0px);
+  font-family: 'Raleway', sans-serif;
+  padding: 50px 0px 5px 0px;
+  margin-top: -30px;
+  margin-right: -200px;
+
+}
+.home-button {
+  margin: 0 auto;
+}
+
+body {
+  
+  background-image:  linear-gradient( #CCCCCC, transparent), url("https://thumbs.dreamstime.com/b/business-travel-traveling-map-world-concept-passport-holidays-visa-tourism-booking-sunglasses-plan-tourist-trip-glasses-summer-80220912.jpg");
+  background-size: cover;
+
+
+}
+
+nav .nav-wrapper {
+    background-color: !important pink;
+}
+h4 {
+  font-size: 30px;
+  padding-top: 20px;
+  margin-top: 10px;
+  font-family: 'Raleway', sans-serif;
+  padding-bottom: 30px;
+
+}
+
+
+p{
+  color: !important#5bb8ad;
+}
+
+input[type=text]:not(.browser-default) {
+  background-color: !important pink;
+}
+
+input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea {
+  background-color: white;
+}
+.search-box {
+    overflow: scroll;
+    color: pink;
+}
